@@ -34,6 +34,12 @@ p.lead{
   line-height: 34px;
 }
 
+.site-container{
+  max-width: 1440px;
+  margin: 0 auto;
+  background-color: #ffffff;
+}
+
 .wrapper{
   padding-right: 56px;
   padding-left: 56px;
@@ -52,11 +58,12 @@ p.lead{
   justify-content: center;
   flex-direction: column;
   align-items: flex-start;
-  background: #000000;
+  background: url(../img/blue-gradient.png) top left no-repeat, url(../img/yellow-gradient.png) bottom right no-repeat, #000000;
 }
 
 .hero p {
   margin-bottom: 30px;
+  width: 75%;
 }
 
 .button{
@@ -79,14 +86,105 @@ p.lead{
   padding: 32px 120px;
 }
 
+.column{
+  flex: 1;
+}
+
 .three-column{
   padding: 0px 120px 32px 120px;
   display: flex;
   justify-content: center;
   flex-direction: row;
-  gap: 32px;
+  gap: 64px;
   align-items: flex-start;
 }
+
+.multi-column{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 50px;
+  gap: 32px;
+}
+
+.multi-column .column p{
+  margin: 0;
+  font-size: 16px;
+  line-height: 28px;
+}
+.multi-column .column h4{
+  margin-bottom: 5px;
+}
+
+.picture-profile{
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+}
+
+.footer{
+  display: flex;
+  flex-direction: row;
+  padding: 30px 120px;
+  gap: 64px;
+  box-shadow: 0 -1px #eeeeee;
+}
+
+.footer .copyright{
+  font-weight: bold;
+  font-size: 16px;
+  white-space: nowrap;
+}
+
+.small{
+  font-size: 16px;
+  line-height: 28px;
+}
+
+@media only screen and (max-width: 800px) {
+
+  h1{
+    font-size: 48px;
+    line-height: 56px;
+  }
+
+  .wrapper{
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+
+  .hero{
+    padding: 50px 40px;
+  }
+
+  .hero p{
+    width: 100%;
+  }
+
+  .one-column{
+    padding: 32px 40px;
+  }
+
+  .three-column{
+    padding: 32px 40px;
+    flex-direction: column;
+  }
+
+  .multi-column{
+    padding: 32px 40px;
+    flex-direction: column;
+  }
+
+  .footer{
+    padding: 32px 40px;
+    flex-direction: column;
+    gap: 0px;
+  }
+}
+
+
 
 /* ==========================================================================
    Base styles: opinionated defaults
